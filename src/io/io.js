@@ -26,7 +26,7 @@ function normalize(arg) {
  * @param {string} result
  */
 function print(result) {
-  console.log(result);
+  console.log('\x1b[36m%s\x1b[0m', '\n' + result);
 }
 
 module.exports = {
