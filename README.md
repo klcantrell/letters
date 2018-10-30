@@ -1,9 +1,19 @@
 ## Setup
 
 - This JavaScript app was developed on **Node v8.12** and **npm v6.4.1**
-- Run `npm i` to install the only dependency, **Jest**, for running tests
+- After cloning or downloading the repo, `cd` into the project directory and run `npm i` to install the only dependency, **Jest**, for running tests
 
 ## Tests
 
-- Run `npm test` to run the unit tests and test cases created to check this app's functionality
-- Run `npm run test:cases` to run only the test cases created to check this app's functionality
+- Run `npm run test:unit` to run the unit tests
+- Run `npm run test:cases` to run the test cases
+
+## Using the app
+
+1. Run 'npm start' to start the app.
+2. The app will give you instructions in the terminal.
+3. Ctl-C to quit the app
+
+## Error handling
+
+1. If you provide the app some incorrect input (e.g. a character other than a letter), it will print out some user-friendly error message.

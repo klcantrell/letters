@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest --verbose",
+    "test:unit": "jest src/app/app.test.js --verbose",
     "test:cases": "jest src/cases.test.js --verbose"
   },
   "keywords": [],
