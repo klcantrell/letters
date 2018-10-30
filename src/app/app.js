@@ -47,7 +47,7 @@ function appendNewline(line) {
  */
 function buildDiamond(letter) {
   if (LETTERS.indexOf(letter) === -1) {
-    return `Oops, you passed an incorrect character.  Please pass in a letter.`;
+    return `Oops, you passed an invalid character.`;
   }
   const widestRowWidth = calculateRowWidth(letter);
   const pivot = LETTERS.indexOf(letter);

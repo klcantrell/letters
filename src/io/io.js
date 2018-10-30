@@ -1,17 +1,25 @@
 /**
- * @returns {string} - argument from user
+ * @param {*} arg
+ * @returns {string}
  */
-function readline() {
-  const arg = process.argv[2];
-  if (arg === undefined) {
-    print('Please pass in a single letter');
+function validate(arg) {
+  if (arg === undefined || arg === '') {
+    print('Hey there, you forgot to type a letter');
     return null;
   }
   if (arg.trim().length > 1) {
     print('Please pass in only one letter');
     return null;
   }
-  return process.argv[2].toUpperCase();
+  return String(arg);
+}
+
+/**
+ * @param {string} arg
+ * @returns {string}
+ */
+function normalize(arg) {
+  return arg.toUpperCase();
 }
 
 /**
@@ -22,6 +30,7 @@ function print(result) {
 }
 
 module.exports = {
-  readline,
+  validate,
   print,
+  normalize,
 };
