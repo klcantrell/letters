@@ -15,4 +15,10 @@ describe('test cases for the buildDiamond function', () => {
       '  A  \n B B \nC   C\n B B \n  A  '.trim()
     );
   });
+  test('F', () => {
+    console.log(buildDiamond('F'));
+    expect(buildDiamond('F').trim()).toBe(
+      '     A     \n    B B    \n   C   C   \n  D     D  \n E       E \nF         F\n E       E \n  D     D  \n   C   C   \n    B B    \n     A     '.trim()
+    );
+  });
 });
