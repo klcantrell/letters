@@ -43,6 +43,24 @@ function appendNewline(line) {
 
 /**
  * @param {string} letter
+ * @param {number} widestLength
+ * @returns {string}
+ */
+function buildCenteredRow(letter, widestLength) {
+  return centerRow(buildRow(letter), widestLength);
+}
+
+/**
+ * @param {string} letter
+ * @param {number} widestLength
+ * @returns {string}
+ */
+function buildCenteredRowWithNewline(letter, widestLength) {
+  return appendNewline(buildCenteredRow(letter, widestLength));
+}
+
+/**
+ * @param {string} letter
  * @returns {string}
  */
 function buildDiamond(letter) {
@@ -56,9 +74,9 @@ function buildDiamond(letter) {
     .map((row, idx, arr) => {
       const currentLetter = LETTERS[idx];
       if (arr.length === 1) {
-        return centerRow(buildRow(currentLetter), widestRowWidth);
+        return buildCenteredRow(currentLetter, widestRowWidth);
       }
-      return appendNewline(centerRow(buildRow(currentLetter), widestRowWidth));
+      return buildCenteredRowWithNewline(currentLetter, widestRowWidth);
     })
     .join('');
   const secondHalf = Array(pivot)
@@ -66,9 +84,9 @@ function buildDiamond(letter) {
     .map((row, idx) => {
       const currentLetter = LETTERS[idx];
       if (idx === 0) {
-        return centerRow(buildRow(currentLetter), widestRowWidth);
+        return buildCenteredRow(currentLetter, widestRowWidth);
       }
-      return appendNewline(centerRow(buildRow(currentLetter), widestRowWidth));
+      return buildCenteredRowWithNewline(currentLetter, widestRowWidth);
     })
     .reverse()
     .join('');
