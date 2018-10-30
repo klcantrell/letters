@@ -10,10 +10,10 @@
 
 ## Using the app
 
-1. Run 'npm start' to start the app.
+1. Run `npm start` to start the app.
 2. The app will give you instructions in the terminal.
-3. Ctl-C to quit the app
+3. Hit Ctl-C to quit the app.
 
 ## Error handling
 
-1. If you provide the app some incorrect input (e.g. a character other than a letter), it will print out some user-friendly error message.
+- If you provide the app some incorrect input (e.g. a character other than a letter), it will print out a user-friendly error message.
