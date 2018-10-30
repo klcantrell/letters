@@ -3,7 +3,7 @@ const {
   buildRow,
   appendNewline,
   centerRow,
-} = require('./index');
+} = require('./app');
 
 describe('calculateWidestRow function', () => {
   it('should return the length of the widest row', () => {
