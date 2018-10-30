@@ -53,8 +53,11 @@ function buildDiamond(letter) {
   const pivot = LETTERS.indexOf(letter);
   const firstHalf = Array(pivot + 1)
     .fill()
-    .map((row, idx) => {
+    .map((row, idx, arr) => {
       const currentLetter = LETTERS[idx];
+      if (arr.length === 1) {
+        return centerRow(buildRow(currentLetter), widestRowWidth);
+      }
       return appendNewline(centerRow(buildRow(currentLetter), widestRowWidth));
     })
     .join('');
@@ -63,9 +66,7 @@ function buildDiamond(letter) {
     .map((row, idx) => {
       const currentLetter = LETTERS[idx];
       if (idx === 0) {
-        return appendNewline(
-          centerRow(buildRow(currentLetter), widestRowWidth)
-        );
+        return centerRow(buildRow(currentLetter), widestRowWidth);
       }
       return appendNewline(centerRow(buildRow(currentLetter), widestRowWidth));
     })
