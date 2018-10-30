@@ -5,4 +5,5 @@
 
 ## Tests
 
-- Run `npm test` to see the test cases created to check this app's functionality
+- Run `npm test` to run the unit tests and test cases created to check this app's functionality
+- Run `npm run test:cases` to run only the test cases created to check this app's functionality
